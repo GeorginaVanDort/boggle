@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.button) Button mButton;
 
     String[] letters = new String[] {
-            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+            "A", "B", "C", "D", "E", "F", "G", "H", "I"
     };
 
     @Override
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String word = mInputEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
             intent.putExtra("word", word);
+            intent.putExtra("letters", letters);
             startActivity(intent);
         }
     }
